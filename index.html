@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V2Ray VPN - Легкое VPN-приложение</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="V2Ray VPN Logo">
+                <h1>V2Ray VPN</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Особенности</a></li>
+                    <li><a href="#download">Скачать</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Безопасное и быстрое VPN-решение</h1>
+                <p>V2Ray VPN обеспечивает защищенное соединение с поддержкой разных протоколов и автоматическим выбором лучшего сервера</p>
+                <a href="#download" class="btn btn-primary">Скачать APK</a>
+                <div class="hero-image">
+                    <img src="assets/hero-image.svg" alt="V2Ray VPN App">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Особенности приложения</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Безопасное шифрование</h3>
+                    <p>Защита вашего трафика с использованием протоколов V2Ray/XRay</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Множество протоколов</h3>
+                    <p>Поддержка TCP, WebSocket, gRPC и HTTP с фрагментацией</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Автоматический выбор</h3>
+                    <p>Определение лучшего сервера на основе пинга</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Мониторинг использования</h3>
+                    <p>Отслеживание статистики трафика и производительности</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Встроенные VLESS ключи</h3>
+                    <p>Быстрое подключение без дополнительной настройки</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Совместимость</h3>
+                    <p>Работает на Android-устройствах</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <h2>Скачать V2Ray VPN</h2>
+            <div class="notice-banner">
+                <p><i class="fas fa-info-circle"></i> Данный сайт является демонстрационным. APK-приложение собирается отдельно согласно <a href="#" id="show-instructions">инструкции по сборке</a>.</p>
+            </div>
+            
+            <!-- Модальное окно с инструкцией -->
+            <div id="instructions-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Инструкция по сборке APK для V2Ray VPN</h2>
+                    <div class="instructions-content">
+                        <h3>Необходимые компоненты</h3>
+                        <ol>
+                            <li>Flutter SDK (версия 3.x или новее)</li>
+                            <li>Android Studio с SDK</li>
+                            <li>Java JDK (версия 11 или новее)</li>
+                        </ol>
+                        
+                        <h3>Шаги по сборке APK</h3>
+                        
+                        <h4>1. Клонирование проекта с Replit</h4>
+                        <pre><code>git clone https://github.com/username/v2ray-vpn.git
+cd v2ray-vpn</code></pre>
+                        
+                        <h4>2. Обновление зависимостей</h4>
+                        <pre><code>flutter pub get</code></pre>
+                        
+                        <h4>3. Проверка настройки Flutter</h4>
+                        <pre><code>flutter doctor</code></pre>
+                        <p>Убедитесь, что все зависимости установлены и Flutter правильно настроен для разработки Android-приложений.</p>
+                        
+                        <h4>4. Сборка APK</h4>
+                        <p>Для отладочной версии:</p>
+                        <pre><code>flutter build apk</code></pre>
+                        
+                        <p>Для релизной версии:</p>
+                        <pre><code>flutter build apk --release</code></pre>
+                        
+                        <p>APK-файл будет доступен по пути:</p>
+                        <pre><code>build/app/outputs/flutter-apk/app-release.apk</code></pre>
+                        
+                        <a href="APK_BUILD_INSTRUCTIONS.md" class="btn btn-secondary" target="_blank">Скачать полную инструкцию</a>
+                    </div>
+                </div>
+            </div>
+            <div class="download-options">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h3>Android APK</h3>
+                    <p>Версия: 1.0.0</p>
+                    <p>Размер: 15 MB</p>
+                    <a href="download/v2ray_vpn.apk" class="btn btn-download">Скачать APK (Демо)</a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>Исходный код</h3>
+                    <p>Для разработчиков</p>
+                    <a href="https://github.com/username/v2ray-vpn" class="btn btn-secondary">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2>Скриншоты приложения</h2>
+            <div class="screenshot-grid">
+                <div class="screenshot">
+                    <img src="assets/screenshot1.svg" alt="Главный экран">
+                    <p>Главный экран</p>
+                </div>
+                <div class="screenshot">
+                    <img src="assets/screenshot2.svg" alt="Выбор сервера">
+                    <p>Выбор сервера</p>
+                </div>
+                <div class="screenshot">
+                    <img src="assets/screenshot3.svg" alt="Статистика">
+                    <p>Статистика использования</p>
+                </div>
+                <div class="screenshot">
+                    <img src="assets/screenshot4.svg" alt="Настройки">
+                    <p>Настройки приложения</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Часто задаваемые вопросы</h2>
+            <div class="faq-items">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Как установить приложение?</h3>
+                        <span class="toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Скачайте APK-файл и откройте его на устройстве. При необходимости разрешите установку из неизвестных источников в настройках безопасности вашего устройства.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Какие протоколы поддерживаются?</h3>
+                        <span class="toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Приложение поддерживает множество протоколов, включая TCP, WebSocket, gRPC и HTTP. Для каждого протокола реализована фрагментация для обхода блокировок.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Как работает автоматический выбор сервера?</h3>
+                        <span class="toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Приложение автоматически проверяет пинг до всех доступных серверов и выбирает тот, который обеспечивает наиболее быстрое соединение.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Необходимо ли рутирование устройства?</h3>
+                        <span class="toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Нет, приложение не требует рут-прав для работы и использует стандартный Android VPN API.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Как добавить свой собственный сервер?</h3>
+                        <span class="toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>В настройках приложения перейдите в раздел "Серверы" и нажмите кнопку "Добавить". Затем введите параметры подключения или импортируйте их через VLESS-ссылку.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.svg" alt="V2Ray VPN Logo">
+                    <p>V2Ray VPN &copy; 2025</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Ссылки</h3>
+                    <ul>
+                        <li><a href="#features">Особенности</a></li>
+                        <li><a href="#download">Скачать</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#privacy">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-envelope"></i> support@v2rayvpn.example</p>
+                    <p><i class="fab fa-telegram"></i> @V2RayVPN</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Создано с использованием современных технологий. V2Ray VPN не собирает личные данные пользователей.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
